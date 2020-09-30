@@ -66,3 +66,24 @@ print(a_string[0:19])
 print(a_string[:])
 print(a_string[3:11])
 
+
+# Strings vs. Bytes
+
+'''Bytes are bytes; characters are an abstraction.
+ An immutable sequence of Unicode characters is called a string.
+ An immutable sequence of numbers-between-0-and-255 is called
+  a bytes object.'''
+
+by = b'abcd\x65'
+print(by)
+print(type(by))
+print(len(by))
+by += b'\xff'
+print(by)
+print(len(by))
+for b in by:
+    print(b)
+
+'''To define a bytes object, use the b'' “byte literal” syntax. 
+Each byte within the byte literal can be an ascii character or 
+an encoded hexadecimal number from \x00 to \xff (0–255).'''
