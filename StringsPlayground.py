@@ -55,3 +55,14 @@ print(a_list_of_lists)
 
 a_dict = dict(a_list_of_lists)
 print(a_dict.items())
+
+# Slicing a string
+
+a_string = 'My alphabet starts where your alphabet ends'
+
+print(a_string[3:11])
+print(a_string[3:-3])
+print(a_string[0:19])
+print(a_string[:])
+print(a_string[3:11])
+
