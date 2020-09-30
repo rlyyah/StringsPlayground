@@ -111,3 +111,25 @@ amt = s.count(b_byte.decode('ascii'))
 print(b_byte)
 print(b_byte.decode('ascii'))
 print(amt)
+
+'''Link between strings and bytes
+For bytes its: decode(),
+For strings its: encode()'''
+
+a_string = '深入 Python' 
+len(a_string)
+
+by = a_string.encode('utf-8')
+print(by)
+print(len(by))
+by = a_string.encode('gb18030')
+print(by)
+print(len(by))
+by = a_string.encode('big5')
+print(by)
+print(len(by))
+
+roundtrip = by.decode('big5')
+print('a_string =?= roundtrip')
+print(roundtrip == a_string)
+
