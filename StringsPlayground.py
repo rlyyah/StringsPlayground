@@ -36,3 +36,10 @@ print(some_float_number)
 new_msg = "my super number migh have been: {0:.1f}, but I've rounded it a lil bit".format(some_float_number)
 print(new_msg)
 
+s = '''Finished files are the re-
+sult of years of scentif-
+ic study combined with the
+experience of years.'''
+# print(s.splitlines())
+print(s.lower())
+print(s.lower().count('f'))
