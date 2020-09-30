@@ -96,7 +96,8 @@ print(another_by)
 print('ByteArray rep: ')
 print(barr)
 
-'''with the bytearray object, you can assign individual bytes 
+'''
+with the bytearray object, you can assign individual bytes 
 using index notation. The assigned value must be an integer 
 between 0–255. - The one thing you can never do is mix bytes and strings.'''
 
@@ -112,9 +113,11 @@ print(b_byte)
 print(b_byte.decode('ascii'))
 print(amt)
 
-'''Link between strings and bytes
+'''
+Link between strings and bytes
 For bytes its: decode(),
-For strings its: encode()'''
+For strings its: encode()
+'''
 
 a_string = '深入 Python' 
 len(a_string)
@@ -132,4 +135,18 @@ print(len(by))
 roundtrip = by.decode('big5')
 print('a_string =?= roundtrip')
 print(roundtrip == a_string)
+
+# Character Encoding Of Python Source Code
+
+''' 
+In Python 2, the default encoding 
+for .py files was ascii. In Python 3, 
+the default encoding is utf-8.
+'''
+
+'''
+if you would like to use a different encoding within your Python code, 
+you can put an encoding declaration on the first line of each file.
+'''
+
 
