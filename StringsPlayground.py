@@ -87,3 +87,27 @@ for b in by:
 '''To define a bytes object, use the b'' “byte literal” syntax. 
 Each byte within the byte literal can be an ascii character or 
 an encoded hexadecimal number from \x00 to \xff (0–255).'''
+
+another_by = b'abcd\x65'
+barr = bytearray(another_by)
+print()
+print('Byte rep: ')
+print(another_by)
+print('ByteArray rep: ')
+print(barr)
+
+'''with the bytearray object, you can assign individual bytes 
+using index notation. The assigned value must be an integer 
+between 0–255. - The one thing you can never do is mix bytes and strings.'''
+
+barr[0]=102
+print(barr)
+
+b_byte = b'd'
+s = 'abcde'
+
+amt = s.count(b_byte.decode('ascii'))
+
+print(b_byte)
+print(b_byte.decode('ascii'))
+print(amt)
