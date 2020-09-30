@@ -66,3 +66,70 @@ print(a_string[0:19])
 print(a_string[:])
 print(a_string[3:11])
 
+
+# Strings vs. Bytes
+
+'''Bytes are bytes; characters are an abstraction.
+ An immutable sequence of Unicode characters is called a string.
+ An immutable sequence of numbers-between-0-and-255 is called
+  a bytes object.'''
+
+by = b'abcd\x65'
+print(by)
+print(type(by))
+print(len(by))
+by += b'\xff'
+print(by)
+print(len(by))
+for b in by:
+    print(b)
+
+'''To define a bytes object, use the b'' “byte literal” syntax. 
+Each byte within the byte literal can be an ascii character or 
+an encoded hexadecimal number from \x00 to \xff (0–255).'''
+
+another_by = b'abcd\x65'
+barr = bytearray(another_by)
+print()
+print('Byte rep: ')
+print(another_by)
+print('ByteArray rep: ')
+print(barr)
+
+'''with the bytearray object, you can assign individual bytes 
+using index notation. The assigned value must be an integer 
+between 0–255. - The one thing you can never do is mix bytes and strings.'''
+
+barr[0]=102
+print(barr)
+
+b_byte = b'd'
+s = 'abcde'
+
+amt = s.count(b_byte.decode('ascii'))
+
+print(b_byte)
+print(b_byte.decode('ascii'))
+print(amt)
+
+'''Link between strings and bytes
+For bytes its: decode(),
+For strings its: encode()'''
+
+a_string = '深入 Python' 
+len(a_string)
+
+by = a_string.encode('utf-8')
+print(by)
+print(len(by))
+by = a_string.encode('gb18030')
+print(by)
+print(len(by))
+by = a_string.encode('big5')
+print(by)
+print(len(by))
+
+roundtrip = by.decode('big5')
+print('a_string =?= roundtrip')
+print(roundtrip == a_string)
+
